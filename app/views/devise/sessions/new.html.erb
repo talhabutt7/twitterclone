@@ -1,50 +1,22 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login form</title>
-  <meta name="viewpot" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="/twitter.css" />
-</head>
-
-<body>require_tree
 <section class="login-form">
   <form>
     <div class="box">
       <div class="img">
-        <img src="image/twitterlogo.png" alt="user" />
+        <%= image_tag 'twitterlogo.png', class: "logo-image" %>
       </div>
       <div class="heading">
         <h4>Twitter</h4>
       </div>
       <div class="form-fields">
         <div class="button-box">
-          <button type="submit">Sign in</button>
+          <button type="submit">Sign In</button>
         </div>
-        <a href="">Create new account</a>
+        <div class="signup-link">
+          <a href="">Create new account</a>
+        </div>
       </div>
     </div>
   </form>
 </section>
-</body>
-</html>
+
+

@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </head>
 
 <body>
@@ -33,15 +34,15 @@
       <span></span>
     </div>
   </div>
-  <div id="navbarExample" class="navbar-menu">
-    <div class="navbar-end">
-      <div class="field is-grouped">
-        <p class="control">
-          <%= link_to 'New Tweeet', new_tweeet_path, class: "button is-info is-inverted" %>
-        </p>
-      </div>
-    </div>
-  </div>
+<!--  <div id="navbarExample" class="navbar-menu">-->
+<!--    <div class="navbar-end">-->
+<!--      <div class="field is-grouped">-->
+<!--        <p class="control">-->
+          <%#= link_to 'New Tweeet', new_tweeet_path, class: "button is-info is-inverted" %>
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 </nav>
 
 <%= yield %>

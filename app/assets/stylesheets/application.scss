@@ -15,19 +15,20 @@
  */
 
 @import "bulma";
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
 
 .navbar-brand .title {
   color: white;
 }
 
 //round images
-.image {
-  border-radius: 50%;
-
-  img {
-    border-right: 50%;
-  }
-}
+//.image {
+//  border-radius: 50%;
+//
+//  img {
+//    border-right: 50%;
+//  }
+//}
 
 .notification:not(:last-child) {
   margin-bottom: 0;
