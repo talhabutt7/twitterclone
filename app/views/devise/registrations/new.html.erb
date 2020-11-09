@@ -1,0 +1,47 @@
+<section class="login-form">
+  <form class="box">
+    <div class="heading">
+      <h3>Create Account</h3>
+    </div>
+    <div class="img">
+      <%= image_tag 'twitterlogo.png', class: "logo-image" %>
+    </div>
+
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <!--        <%#= f.label :email %><br/>-->
+        <%= f.email_field :email, placeholder: "Email ID", class: 'place-holder', autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%#= f.label :password %>
+        <%# if @minimum_password_length %>
+        <!--          <em>(<%#= @minimum_password_length %> characters minimum)</em>-->
+        <!--        <%# end %><br/>-->
+
+        <%= f.password_field :password, placeholder: "Password", class: 'place-holder', autocomplete: "new-password" %>
+
+      </div>
+
+      <div class="field">
+        <!--        <%#= f.label :password_confirmation %><br/>-->
+        <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: 'place-holder', autocomplete: "new-password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Proceed", class: 'button' %>
+        <%#= link_to "Proceed", new_user_registration_path, class: 'signin-button' %>
+      </div>
+      <%#= render "devise/shared/links" %>
+      <!--      <div class="signup-link">-->
+      <!--        <a href="">Can't sign in? Reset Password</a>-->
+      <!--      </div>-->
+      </form>
+      </section>
+    <% end %>
+
+
+

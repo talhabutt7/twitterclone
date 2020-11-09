@@ -2,6 +2,15 @@ class TweeetsController < ApplicationController
   before_action :set_tweeet, only: [:show, :edit, :update, :destroy]
   # before_action :authenticate_user!, except: [:index, show]
 
+  def mainpage
+
+  end
+
+  def setupprofile
+
+  end
+
+
   # GET /tweeets
   # GET /tweeets.json
   def index

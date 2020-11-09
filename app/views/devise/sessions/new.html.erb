@@ -1,22 +1,41 @@
 <section class="login-form">
-  <form>
-    <div class="box">
-      <div class="img">
-        <%= image_tag 'twitterlogo.png', class: "logo-image" %>
-      </div>
-      <div class="heading">
-        <h4>Twitter</h4>
-      </div>
-      <div class="form-fields">
-        <div class="button-box">
-          <button type="submit">Sign In</button>
-        </div>
-        <div class="signup-link">
-          <a href="">Create new account</a>
-        </div>
-      </div>
+
+  <form class="box">
+    <div class="heading">
+      <h3>Sign in</h3>
     </div>
-  </form>
-</section>
+    <div class="img">
+      <%= image_tag 'twitterlogo.png', class: "logo-image" %>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <!--        <%#= f.label :email %><br/>-->
+        <%= f.email_field :email, placeholder: "Email ID", class: 'place-holder', autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <!--        <%#= f.label :password %><br/>-->
+        <%= f.password_field :password, placeholder: "Password", class: 'place-holder', autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: 'button' %>
+      </div>
+      <%= render "devise/shared/links" %>
+<!--      <div class="signup-link">-->
+<!--        <a href="">Can't sign in? Reset Password</a>-->
+<!--      </div>-->
+      </form>
+      </section>
+    <% end %>
+
 
 

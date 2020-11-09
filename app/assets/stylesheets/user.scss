@@ -44,12 +44,25 @@ body {
   top: -90px;
 }
 
-.login-form .box .form-fields .button-box {
+.logo-image {
+  position: relative;
+  top: -70px;
+}
+
+.login-form .box .heading h3 {
+  font-size: 25px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: -70px;
+}
+
+.login-form .box .button-box {
   width: 250px;
   display: flex;
 }
 
-.login-form .box .form-fields .button-box button {
+.login-form .box .actions .button {
 
   font-family: 'ABeeZee', sans-serif;
   font-style: italic;
@@ -59,13 +72,34 @@ body {
   box-shadow: 5px 5px 10px #cccccc;
   color: #ffffff;
   text-align: center;
-  width: 250px;
+  width: 226px;
   height: 50px;
   position: relative;
-  top: -20px;
+  top: 20px;
 }
 
-.login-form .box .form-fields .signup-link{
+.login-form .box .form-actions .button {
+
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+  padding: 0px 23px;
+  font-size: 20px;
+  background-color: #0089fe;
+  box-shadow: 5px 5px 10px #cccccc;
+  color: #ffffff;
+  text-align: center;
+  width: 226px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+}
+
+.login-form .box .field .place-holder {
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+}
+
+.login-form .box .signup-link {
   text-align: center;
   font-size: 15px;
   font-style: italic;
@@ -75,14 +109,42 @@ body {
   bottom: -50px;
 }
 
-.logo-image{
-  position: relative;
-  top: -80px;
-}
-//.box {
+//.login-form .box .actions .signin-button {
 //
-//  background-image: url(twitterlogo.png);
-//  width: 150px;
-//  display: block;
-//  margin: auto;
+//  font-family: 'ABeeZee', sans-serif;
+//  font-style: italic;
+//  padding: 0px 23px;
+//  font-size: 20px;
+//  background-color: #0089fe;
+//  box-shadow: 5px 5px 10px #cccccc;
+//  color: #ffffff;
+//  text-align: center;
+//  width: 226px;
+//  height: 50px;
+//  position: relative;
+//  top: 20px;
 //}
+
+.login-form .box .actions .signin-button {
+  font-family: 'ABeeZee', sans-serif;
+  font-style: italic;
+  padding: 10px 35px;
+  font-size: 20px;
+  background-color: #0089fe;
+  box-shadow: 5px 5px 10px #cccccc;
+  color: #ffffff;
+  text-align: center;
+  width: 226px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  left: 37px;
+  //padding: 1em 1.5em;
+  //text-decoration: none;
+  //text-transform: uppercase;
+}
+
+.login-form .box .actions .signin-button:hover {
+  background-color: #555;
+}
+

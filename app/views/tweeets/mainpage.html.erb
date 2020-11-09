@@ -1,0 +1,22 @@
+<section class="login-form">
+  <form>
+    <div class="box">
+      <div class="img">
+        <%= image_tag 'twitterlogo.png', class: "logo-image" %>
+      </div>
+      <div class="heading">
+        <h4>Twitter</h4>
+      </div>
+
+        <div class="actions">
+<!--          <button type="submit", class="button">Sign In</button>-->
+          <%= link_to "Sign In", new_user_session_path, class: 'signin-button' %>
+        </div>
+        <div class="signup-link">
+          <%= link_to "Create new account", new_user_registration_path %>
+
+        </div>
+
+    </div>
+  </form>
+</section>
