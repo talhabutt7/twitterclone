@@ -12,6 +12,8 @@ class TweeetsController < ApplicationController
   # GET /tweeets/1
   # GET /tweeets/1.json
   def show
+    @comment = Comment.new
+    @comment.tweeet_id = @tweeet.id
   end
 
   # GET /tweeets/new

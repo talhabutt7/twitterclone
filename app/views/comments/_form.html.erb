@@ -1,0 +1,17 @@
+
+
+<h3>Post a Comment</h3>
+
+<%= form_for [ @tweeet, @comment ] do |f| %>
+  <p>
+    <%= f.label :name, "Your Name"  %>
+
+  </p>
+  <p>
+    <%= f.label :body %><br/>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

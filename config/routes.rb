@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   # put '/tweeet/:id/like', to: 'tweeets#like', as: 'like'
   resources :tweeets do
     resources :likes
+    resources :comments
   end
+
 end
