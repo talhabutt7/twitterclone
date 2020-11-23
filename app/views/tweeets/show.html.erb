@@ -8,30 +8,9 @@
 <%= link_to 'Edit', edit_tweeet_path(@tweeet) %> |
 <%= link_to 'Back', tweeets_path %>
 
-<p><%= @tweeet.likes.count %> <%= (@tweeet.likes.count) == 1 ? 'Like' : 'Likes' %></p>
 
 
 
-<!--<h3>Post a Comment</h3>-->
 
-<%#= form_for [ @tweeet, @comment ] do |f| %>
-<!--  <p>-->
-    <%#= f.label :name, "Your Name"  %>
-
-<!--  </p>-->
-<!--  <p>-->
-<!--    <%#= f.label :body %><br/>-->
-    <%#= f.text_area :body %>
-<!--  </p>-->
-<!--  <p>-->
-    <%#= f.submit 'Submit' %>
-<!--  </p>-->
-<%# end %>
-
-
-<!--<h3>Comments</h3>-->
-<%#= render partial: 'comments/comment', collection: @tweeet.comments.reverse %>
-
-<%#= render partial: 'comments/form' %>
 
 <!--<p>Posted <%#= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</p>-->

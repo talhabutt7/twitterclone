@@ -30,16 +30,33 @@
           </div>
 
 
+          <small>
+            <p><%= tweeet.likes.count %> <%= (tweeet.likes.count) == 1 ? 'Like' : 'Likes' %></p>
+          </small>
 
-          <%#= link_to 'Like', tweeet_likes_path(tweeet.id), method: :post %>
-          <p><%= tweeet.likes.count %> <%= (tweeet.likes.count) == 1 ? 'Like' : 'Likes' %></p>
 
-          <% pre_like = tweeet.likes.find { |like| like.user_id == current_user.id} %>
+          <% pre_like = tweeet.likes.find { |like| like.user_id == current_user.id } %>
           <% if pre_like %>
-            <%= link_to 'Unlike', tweeet_like_path(tweeet.id, pre_like), method: :delete %>
+            <%= link_to 'Unlike', tweeet_like_path(tweeet.id, pre_like), remote: true, method: :delete %>
           <% else %>
-            <%= link_to 'Like', tweeet_likes_path(tweeet.id), method: :post %>
+            <%= link_to 'Like', tweeet_likes_path(tweeet.id), remote: true, method: :post %>
           <% end %>
+
+
+          <%#= render 'comments/form' %>
+
+          <section class="section comments">
+            <div class="container">
+              <h2 class="subtitle is-5"><strong><%= @tweeet.comments.count %></strong> Comments</h2>
+              <%= render @tweeet.comments %>
+              <div class="comment-form">
+                <hr />
+                <h3 class="subtitle is-3">Leave a reply</h3>
+                <%= render 'comments/form' %>
+              </div>
+            </div>
+          </section>
+
 
 
 
@@ -47,14 +64,11 @@
           <% if user_signed_in? && current_user.id == tweeet.user_id %>
             <nav class="level">
               <div class="level-right">
-                <%#= link_to tweeet, class: "level-item" do %>
-<!--                  <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>-->
-                <%# end %>
                 <%= link_to edit_tweeet_path(tweeet), class: "level-item" do %>
-                  <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                  <span class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></span>
                 <% end %>
                 <%= link_to tweeet, method: :delete, data: {confirm: "Are you sure you want to delete this tweeet?"} do %>
-                  <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                  <span class="del"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
                 <% end %>
               </div>
             </nav>

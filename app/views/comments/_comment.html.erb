@@ -1,5 +1,15 @@
 
-<div>
-  <h4>Comment by <%= comment.name %></h4>
-  <p class="comment"><%= comment.body %></p>
+<div class="box">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= comment.name %>:</strong>
+          <%= comment.comment %>
+        </p>
+      </div>
+    </div>
+    <%= link_to 'Delete', [comment.tweeet, comment],
+                method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+  </article>
 </div>

@@ -1,17 +1,28 @@
+<%#= simple_form_for(@tweeet, @comment) do |f| %>
+
+<!--  <div class="field">-->
+<!--    <div class="control">-->
+      <%#= f.input :comments, label: "Comments", input_html: {class: "input"}, wrapper: false, label_html: {class: "label"}, placeholder: "Write a comment...", autofocus: true %>
+      <%#= f.submit 'Submit' %>
+<!--    </div>-->
+<!--  </div>-->
+<%# end %>
 
 
-<h3>Post a Comment</h3>
+<%= simple_form_for([@tweeet, @tweeet.comments.build]) do |f| %>
+  <!--
+  collection.build(attributes = {}, …) Returns one or more new objects of the collection type that have been instantiated with attributes and linked to this object through a foreign key, but have not yet been saved. Note: This only works if an associated object already exists, not if it‘s nil!
+  -->
+  <div class="field">
+    <div class="control">
+      <%= f.input :name, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
 
-<%= form_for [ @tweeet, @comment ] do |f| %>
-  <p>
-    <%= f.label :name, "Your Name"  %>
-
-  </p>
-  <p>
-    <%= f.label :body %><br/>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit 'Submit' %>
-  </p>
+  <div class="field">
+    <div class="control">
+      <%= f.input :comment, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' }  %>
+    </div>
+  </div>
+  <%= f.button :submit, 'Leave a reply', class: "button is-primary" %>
 <% end %>
