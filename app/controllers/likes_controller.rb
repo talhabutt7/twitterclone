@@ -2,8 +2,6 @@ class LikesController < ApplicationController
   before_action :find_tweeet
   before_action :find_like, only: [:destroy]
 
-
-
   def create
     if already_liked?
       flash[:notice] = "You can't like more than once"
@@ -36,6 +34,5 @@ class LikesController < ApplicationController
   def find_tweeet
     @tweeet = Tweeet.find(params[:tweeet_id])
   end
-
 
 end

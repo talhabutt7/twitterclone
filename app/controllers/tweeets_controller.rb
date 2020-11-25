@@ -66,15 +66,6 @@ class TweeetsController < ApplicationController
   end
 
 
-  # def like
-  #   #grabbing the tweeet
-  #   @tweeet = Tweeet.all.find(params[:id])
-  #   #creating a like with that tweeet and the current user's id
-  #   Like.create(user_id: current_user.id, tweeet_id: @tweeet.id)
-  #   #redirecting them back to that post
-  #   redirect_to tweeet_path(@tweeet)
-  # end
-
   private
 
   # Use callbacks to share common setup or constraints between actions.
