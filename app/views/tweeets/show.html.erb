@@ -7,3 +7,12 @@
 
 <%= link_to 'Edit', edit_tweeet_path(@tweeet) %> |
 <%= link_to 'Back', tweeets_path %>
+
+<%# if user_signed_in? %>
+  <%# if @tweeet.liked?(current_user) %>
+    <%#= button_to "Like", like_path(@tweeet), method: "put", disabled: true %>
+  <%# else %>
+    <%#= button_to "Like", like_path(@tweeet), method: "put" %>
+  <%# end %>
+<%# end %>
+
